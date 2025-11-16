@@ -8,7 +8,7 @@ def main():
         book_text = get_book_text(relative_path)
         word_count = word_counter(book_text)
         char_count = char_counter(book_text)
-        
+        unique_words = individual_word_counter(book_text)
         
         list_of_char_count = [{k: v} for k,v in char_count.items()]
         
@@ -24,6 +24,11 @@ def main():
             if dictionay["char"].isalpha():
                 print(dictionay["char"] + ":", dictionay["num"])
         
+        print("-" * 12, "Unique Word Counter", "-" * 12)
+        for word in unique_words:
+            print(word[0] + ":", word[1])
+
+
         sys.exit(0)
     
     else:
