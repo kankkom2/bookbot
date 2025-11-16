@@ -26,7 +26,6 @@ def individual_word_counter(string):
         else:
             return True
     def sanitized_on(string_element):
-        string_copy = string_element
         output = ""
         for char in string_element:
             if char.isalpha():
